@@ -3,16 +3,18 @@ package com.demoblaze.tests;
 import com.demoblaze.pages.HomePage;
 import com.demoblaze.pages.LoginPage;
 import org.testng.annotations.Test;
+import utils.JsonReader;
 
 public class LoginTest extends BaseTest {
 
 @Test
     public void validLoginTC()
 {
+
     new HomePage(driver)
             .clickOnLoginButton()
-            .login("mohamed1231","123456789");
-    new LoginPage(driver).verifySuccessfulLogin("mohamed1231");
+            .login(jsonReader.getJsonData("validUser.username"),jsonReader.getJsonData("validUser.password"));
+    new LoginPage(driver).verifySuccessfulLogin(jsonReader.getJsonData("validUser.username"));
 }
 
 @Test
@@ -20,7 +22,7 @@ public class LoginTest extends BaseTest {
 {
     new HomePage(driver)
             .clickOnLoginButton()
-            .login("","mohamed123");
+            .login(jsonReader.getJsonData("emptyUsername.username"),jsonReader.getJsonData("emptyUsername.password"));
     new LoginPage(driver).verifyUnSuccessfulLoginWithEmptyField();
 }
 @Test
@@ -28,7 +30,7 @@ public void inValidLoginWithEmptyPasswordFieldTC()
     {
         new HomePage(driver)
                 .clickOnLoginButton()
-                .login("mohamed1231","");
+                .login(jsonReader.getJsonData("emptyPassword.username"),jsonReader.getJsonData("emptyPassword.password"));
         new LoginPage(driver).verifyUnSuccessfulLoginWithEmptyField();
     }
 
@@ -38,7 +40,7 @@ public void inValidLoginWithEmptyPasswordFieldTC()
 {
     new HomePage(driver)
             .clickOnLoginButton()
-            .login("mohamed1231","123456");
+            .login(jsonReader.getJsonData("invalidUser.username"),jsonReader.getJsonData("invalidUser.password"));
     new LoginPage(driver).verifyUnSuccessFulLoginWithUnMatchedPassword();
 }
 

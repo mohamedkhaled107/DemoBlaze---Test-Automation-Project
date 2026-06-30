@@ -9,6 +9,7 @@ public class LoginPage {
     private WebDriver driver;
     private ElementActions elementActions;
 
+
     private final By userNameField = By.id("loginusername");
     private final By passwordField = By.id("loginpassword");
     private final By loginButton = By.xpath("//button[text()=\"Log in\"]");
