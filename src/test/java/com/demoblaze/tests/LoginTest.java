@@ -3,7 +3,6 @@ package com.demoblaze.tests;
 import com.demoblaze.pages.HomePage;
 import com.demoblaze.pages.LoginPage;
 import org.testng.annotations.Test;
-import utils.JsonReader;
 
 public class LoginTest extends BaseTest {
 

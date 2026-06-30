@@ -2,9 +2,8 @@ package com.demoblaze.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
-import utils.ElementActions;
+import com.demoblaze.utils.ElementActions;
 
 public class CartPage {
     private WebDriver driver;

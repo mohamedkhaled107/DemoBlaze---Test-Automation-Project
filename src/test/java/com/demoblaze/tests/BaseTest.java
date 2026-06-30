@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import utils.JsonReader;
+import com.demoblaze.utils.JsonReader;
 
 public class BaseTest {
     protected JsonReader jsonReader;
