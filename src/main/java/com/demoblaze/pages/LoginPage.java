@@ -3,7 +3,7 @@ package com.demoblaze.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import utils.ElementActions;
+import com.demoblaze.utils.ElementActions;
 
 public class LoginPage {
     private WebDriver driver;

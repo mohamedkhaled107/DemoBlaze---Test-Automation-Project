@@ -1,4 +1,4 @@
-package utils;
+package com.demoblaze.utils;
 
 import com.jayway.jsonpath.JsonPath;
 import org.json.simple.JSONObject;
