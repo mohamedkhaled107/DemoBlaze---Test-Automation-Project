@@ -41,11 +41,9 @@ The framework is designed to be easy to maintain, scalable for future features, 
 The project is built using several design patterns:
 
 - ✅ Page Object Model (POM)
-- ✅ Fluent Page Objects
+- ✅ Fluent Pattern
 - ✅ Factory Pattern
 - ✅ Bot Pattern
-- ✅ Page Generator Manager
-- ✅ Singleton Driver Management
 
 ---
 
